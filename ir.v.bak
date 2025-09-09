@@ -1,0 +1,9 @@
+module ir (
+	iInstruction,
+	oOpcode,
+	oCDcode,  // only for BRA, opcode = 0001
+	osrcType, // 0 for reg/mem, 1 for immediate
+	oDestType // 0 for reg, 1 for immediate
+	osrc1, 
+	oscr2
+);

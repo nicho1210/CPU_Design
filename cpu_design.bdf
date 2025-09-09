@@ -1,0 +1,232 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 272 88 408 168)
+	(text "pc" (rect 5 0 16 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "idata" (rect 0 0 23 12)(font "Arial" ))
+		(text "idata" (rect 21 27 44 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "iclk" (rect 0 0 16 12)(font "Arial" ))
+		(text "iclk" (rect 21 43 37 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "opc" (rect 0 0 17 12)(font "Arial" ))
+		(text "opc" (rect 101 27 118 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 64))
+	)
+)
+(symbol
+	(rect 600 248 824 392)
+	(text "ir" (rect 5 0 10 12)(font "Arial" ))
+	(text "inst" (rect 8 128 25 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "iInstruction[31..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "iInstruction[31..0]" (rect 21 27 107 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "oOpcode[4..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "oOpcode[4..0]" (rect 145 27 214 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "oCDcode[4..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "oCDcode[4..0]" (rect 143 43 214 55)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "osrcType" (rect 0 0 46 12)(font "Arial" ))
+		(text "osrcType" (rect 165 59 211 71)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "odestType" (rect 0 0 51 12)(font "Arial" ))
+		(text "odestType" (rect 160 75 211 87)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "osrc1[11..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "osrc1[11..0]" (rect 154 91 213 103)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96)(line_width 3))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "osrc2[11..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "osrc2[11..0]" (rect 154 107 213 119)(font "Arial" ))
+		(line (pt 224 112)(pt 208 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+)
+(symbol
+	(rect 264 248 496 424)
+	(text "Memory" (rect 5 0 45 12)(font "Arial" ))
+	(text "inst5" (rect 8 160 30 177)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "iRamAddress[11..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "iRamAddress[11..0]" (rect 21 27 118 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "ipcAddress[11..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "ipcAddress[11..0]" (rect 21 43 107 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "iRamEnable" (rect 0 0 59 12)(font "Arial" ))
+		(text "iRamEnable" (rect 21 59 80 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "iRamRW" (rect 0 0 44 12)(font "Arial" ))
+		(text "iRamRW" (rect 21 75 65 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "iRamClk" (rect 0 0 42 12)(font "Arial" ))
+		(text "iRamClk" (rect 21 91 63 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "iData[31..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "iData[31..0]" (rect 21 107 78 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "oData[31..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "oData[31..0]" (rect 160 27 221 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "oc" (rect 0 0 11 12)(font "Arial" ))
+		(text "oc" (rect 202 43 213 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "oe" (rect 0 0 11 12)(font "Arial" ))
+		(text "oe" (rect 202 59 213 71)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "op" (rect 0 0 11 12)(font "Arial" ))
+		(text "op" (rect 202 75 213 87)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "oz" (rect 0 0 10 12)(font "Arial" ))
+		(text "oz" (rect 203 91 213 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "on" (rect 0 0 11 12)(font "Arial" ))
+		(text "on" (rect 202 107 213 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "oPSR[4..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "oPSR[4..0]" (rect 166 123 220 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 160))
+	)
+)
+(connector
+	(pt 408 120)
+	(pt 440 120)
+)
+(connector
+	(pt 440 120)
+	(pt 440 200)
+)
+(connector
+	(pt 192 200)
+	(pt 440 200)
+)
+(connector
+	(pt 192 296)
+	(pt 192 200)
+)
+(connector
+	(pt 192 296)
+	(pt 264 296)
+)
+(connector
+	(pt 496 280)
+	(pt 600 280)
+	(bus)
+)

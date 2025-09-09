@@ -1,0 +1,16 @@
+module PSR (
+	iData,
+	oPSR,
+)
+
+parameter Bits = 12;
+
+input [Bits:0] iData;
+output [4:0]oPSR;
+
+reg rc, re, rp, rz, rn;
+
+assign rc = iData[Bits];
+assign oPSR = Bits;
+
+endmodule 
